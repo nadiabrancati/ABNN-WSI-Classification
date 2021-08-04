@@ -17,8 +17,8 @@ The ```requirements.txt``` file should list all Python libraries that the presen
 ```pip install -r requirements.txt```
 
 # Running the code
-The options to run the script "ABNN_WSI.py" containing the main, are:
-```Training a model
+Genaral usage notes to to run the script "ABNN_WSI.py" containing the main, are:
+```
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -59,6 +59,8 @@ optional arguments:
   --filters_in FILTERS_IN
                         number of Input Map Filters
 ```
+ABNN-WSI requeries two stes: a compressing path and a learning path. 
+
 # Step 1: Compressing path
 Compressing path to create tensors for the Step 2 can be set by using the parameters ```--mode``` of the script equal to ```TENSORS```. 
 
@@ -72,3 +74,17 @@ Learning path to train and test the model can be set by using the parameters ```
 An example of usage for learning path is:
 
 ```python ABNN_WSI.py --mode TRAIN --data_dir path-for-loading-training-tensors --val_dir path-for-loading-validation-tensors --test_dir path-for-loading-test-tensors --aug_dir path-for-loading-some-augmentation-tensors --aug_dir2 path-for-loading-other-augmentation-tensors --gpu_list 0 --seed 0 --model_path path-to-save-model-for-each-epoch --model_path_fin path-to-save-the-final-model --batch_size 16 --learning_rate 0.0001 --ext pth```
+
+# Citation
+If you use this code, please consider citing our work:
+```
+@article{brancati2021,
+  author={Brancati, Nadia and De Pietro, Giuseppe and Riccio, Daniel and Frucci, Maria},
+  journal={IEEE Access}, 
+  title={Gigapixel Histopathological Image Analysis Using Attention-Based Neural Networks}, 
+  year={2021},
+  volume={9},
+  number={},
+  pages={87552-87562},
+  doi={10.1109/ACCESS.2021.3086892}}
+  ```
