@@ -71,7 +71,7 @@ optional arguments:
   --filters_in FILTERS_IN
                         number of Input Map Filters
 ```
-ABNN-WSI requeries two steps: a compressing path and a learning path. 
+To correctly run ```ABNN-WSI.py``` two steps are required: a compressing path and a learning path. 
 
 # Step 1: Compressing path
 Compressing path to create tensors for the Step 2 can be set by using the parameters ```--mode``` of the script equal to ```TENSORS```. 
