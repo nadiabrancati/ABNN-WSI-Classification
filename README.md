@@ -17,8 +17,12 @@ The ```requirements.txt``` file should list all Python libraries that the presen
 ```pip install -r requirements.txt```
 
 # Running the code
-Genaral usage notes to to run the script "ABNN_WSI.py" containing the main, are:
+Genaral usage notes to run the script "ABNN_WSI.py" containing the main, are:
 ```
+usage: ABNN_WSI.py [-h] [--model_type {RESNET18,RESNET34}] [--model_pretrained True]
+                [--model_path_fin MODEL_PATH_FIN] [--data_dir DATA_DIR] [--val_dir TEST_DIR] [--test_dir TEST_DIR]
+                [--mode {TRAIN,TENSOR}] [--gpu_list GPU_LIST] [--num_epoch NUM_EPOCH]
+                [--learning_rate LEARNING_RATE]
 
 optional arguments:
   -h, --help            show this help message and exit
