@@ -23,6 +23,10 @@ optional arguments:
   --mode {TRAIN,TENSOR}
                         possible options: TRAIN and TENSOR
   --seed SEED           Seed value
+  --gpu_list GPU_LIST   number of the GPU that will be used
+  --debug               for debug mode
+  --ext EXT             extension of the structure to load: png for images
+                        (mode=TENSORS) and pth for tensors (mode=TRAIN)
   --patch_size PATCH_SIZE
                         Patch Size
   --patch_scale PATCH_SCALE
@@ -33,12 +37,9 @@ optional arguments:
                         batch size
   --learning_rate LEARNING_RATE
                         learning rate
+  --dropout DROPOUT     dropout rate
   --filters_out FILTERS_OUT
                         number of Attention Map Filters
   --filters_in FILTERS_IN
                         number of Input Map Filters
-  --dropout DROPOUT     dropout rate
-  --gpu_list GPU_LIST   number of the GPU that will be used
-  --debug               for debug mode
-  --ext EXT             extension of the structure to load: png for images
-                        (mode=TENSORS) and pth for tensors (mode=TRAIN)```
+```
