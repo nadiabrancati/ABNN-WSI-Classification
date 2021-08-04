@@ -437,8 +437,8 @@ def main(args):
 
 
 if __name__ == '__main__':
-    MODEL_PATH = "path-of-the-model"
-    DATA_DIR = "path-to-load-images/tensors"
+    MODEL_PATH = "path-to-save/load-the-model"
+    DATA_DIR = "path-for-loading-images/tensors"
     SAVE_DIR = "path-to-save-tensors"
     parser = argparse.ArgumentParser(description='Training a model')
 
