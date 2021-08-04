@@ -61,3 +61,4 @@ optional arguments:
 ```
 # Step 1: Compressing path
 The compressing path to create tensors for the Step 2 can be set by using the parameters ```--mode``` of the script equal to ```TENSORS```:
+```python ABNN_WSI.py --mode TENSOR --model_type RESNET34 --data_dir path-for-loading-images  --gpu_list 0 --seed 0 --model_path path-to-save-the-model-for-each-epoch --model_path_fin path-to-save-the-final-model --ext svs```
