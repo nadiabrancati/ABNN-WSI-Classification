@@ -1,6 +1,6 @@
 # BRACS-WSI-Classification
 This repository contains the code to reproduce results of the [Gigapixel Histopathological Image Analysis Using
-Attention-Based Neural Networks] (https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9447746) paper.
+Attention-Based Neural Networks](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9447746) paper.
 
 ```Training a model
 
