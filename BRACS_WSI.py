@@ -460,10 +460,11 @@ if __name__ == '__main__':
     parser.add_argument('--num_epoch', type=int, default=100, help='max epoch')
     parser.add_argument('--batch_size', type=int, default=1, help='batch size')
     parser.add_argument('--learning_rate', type=float, default=0.0001, help='learning rate')
-    parser.add_argument('--filters_out', type=int, default=64, help='number of Attention Map Filters')
-    parser.add_argument('--filters_in', type=int, default=512, help='number of Input Map Filters')
+    
     # Model parameters
     parser.add_argument('--dropout', type=float, default=0.2, help='dropout rate')
+    parser.add_argument('--filters_out', type=int, default=64, help='number of Attention Map Filters')
+    parser.add_argument('--filters_in', type=int, default=512, help='number of Input Map Filters')
 
     parser.add_argument('--gpu_list', default="0",help='number of the GPU that will be used')
     parser.add_argument('--debug', action='store_true',help='for debug mode')
