@@ -1,6 +1,8 @@
 # BRACS-WSI-Classification
+This repository contains the code to reproduce results of the [Gigapixel Histopathological Image Analysis Using
+Attention-Based Neural Networks] (https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9447746) paper.
 
-`Training a model
+```Training a model
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -39,4 +41,4 @@ optional arguments:
   --gpu_list GPU_LIST   number of the GPU that will be used
   --debug               for debug mode
   --ext EXT             extension of the structure to load: png for images
-                        (mode=TENSORS) and pth for tensors (mode=TRAIN)`
+                        (mode=TENSORS) and pth for tensors (mode=TRAIN)```
