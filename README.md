@@ -60,5 +60,15 @@ optional arguments:
                         number of Input Map Filters
 ```
 # Step 1: Compressing path
-The compressing path to create tensors for the Step 2 can be set by using the parameters ```--mode``` of the script equal to ```TENSORS```:
-```python ABNN_WSI.py --mode TENSOR --model_type RESNET34 --data_dir path-for-loading-images  --gpu_list 0 --seed 0 --model_path path-to-save-the-model-for-each-epoch --model_path_fin path-to-save-the-final-model --ext svs```
+Compressing path to create tensors for the Step 2 can be set by using the parameters ```--mode``` of the script equal to ```TENSORS```. 
+
+An example of usage for compressing path is:
+
+```python ABNN_WSI.py --mode TENSOR --model_type RESNET34 --data_dir path-for-loading-images  --gpu_list 0 --seed 0 --save_dir path-to-save-the-tensors --ext svs```
+
+# Step 2: Learning path
+Learning path to train and test the model can be set by using the parameters ```--mode``` of the script equal to ```TRAIN```. 
+
+An example of usage for learning path is:
+
+```python ABNN_WSI.py --mode TRAIN --data_dir path-for-loading-training-tensors --val_dir path-for-loading-validation-tensors --test_dir path-for-loading-test-tensors --aug_dir path-for-loading-some-augmentation-tensors --aug_dir2 path-for-loading-other-augmentation-tensors --gpu_list 0 --seed 0 --model_path path-to-save-model-for-each-epoch --model_path_fin path-to-save-the-final-model --batch_size 16 --learning_rate 0.0001 --ext pth```
