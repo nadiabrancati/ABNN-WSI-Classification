@@ -12,9 +12,11 @@ The structure of CNN consists in a compressing path and a learning path. In the 
 
 # Experiments
 The experiments are based on Camelyon16 and TUPAC 16 datasets. For Camelyon16 a binary classification into Benign and Malignant classes was performed. Regarding TUPAC16 dataset, a regression related to the prediction of the proliferation score based on molecular data was calculated. 
+
 New esperiments have been made by using WSI of [BRACS dataset](https://www.bracs.icar.cnr.it/). 
 For BRACS dataset, a three-class classification has been performed, by using Atypical Benign, and Malignant classes for WSIs. 
-In order to download the BRACS dataset, you need to create an account [on the site](https://www.bracs.icar.cnr.it/). Then, go to ```Data Collection```, ```Download```, and hit the ```Whole Slide Image Set``` button to access the data. You need to download ```train```, ```validation``` and ```test``` folders. Each subset is divided into three main groups ```Group_AT```, ```Group_BT``` and ```Group_MT```, used in pur experiments as Atypical, Benign and Malignant classes, respectively. Due to computational limits, 10× Magnification WSIs have been considered. WSIs are been normalized by using the method proposed in [this paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5193250). For the augmentation, in addition to affine transformations, the normalized WSIs at5× and2.5× Magnification have bee also used. The result have been computed for five runs with an average F-measure of 69.8% and a standard deviation of 1.5.
+
+In order to download the BRACS dataset, you need to create an account [on this site](https://www.bracs.icar.cnr.it/). Then, go to ```Data Collection```, ```Download```, and hit the ```Whole Slide Image Set``` button to access the data. You need to download ```train```, ```validation``` and ```test``` folders. Each subset is divided into three main groups ```Group_AT```, ```Group_BT``` and ```Group_MT```, used in pur experiments as Atypical, Benign and Malignant classes, respectively. Due to computational limits, 10× Magnification WSIs have been considered. WSIs are been normalized by using the method proposed in [this paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5193250). For the augmentation, in addition to affine transformations, the normalized WSIs at5× and2.5× Magnification have bee also used. The result have been computed for five runs with an average F-measure of 69.8% and a standard deviation of 1.5.
 
 
 # Installation
