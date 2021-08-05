@@ -457,7 +457,7 @@ if __name__ == '__main__':
     parser.add_argument('--seed', type=int, default=1, help='Seed value')
     parser.add_argument('--gpu_list', default="0", help='number of the GPU that will be used')
     parser.add_argument('--debug', action='store_true', help='for debug mode')
-    parser.add_argument('--ext', default='pth', help='extension of the structure to load: png for images (mode=TENSORS) and pth for tensors (mode=TRAIN)')
+    parser.add_argument('--ext', default='pth', help='extension of the structure to load: svs/png for images (mode=TENSORS) and pth for tensors (mode=TRAIN)')
 
     # Training parameters
     parser.add_argument('--patch_size', type=int, default=224, help='Patch Size')
