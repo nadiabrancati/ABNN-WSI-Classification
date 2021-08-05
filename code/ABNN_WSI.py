@@ -444,7 +444,7 @@ if __name__ == '__main__':
 
     # General parameters
     parser.add_argument('--model_type', choices=['RESNET18','RESNET34'],default="RESNET34",help="Models used to create the Tensor_U [RESNET18,RESNET34] ")
-    parser.add_argument('--model_pretrained', default='True', action='store_true', help='if original pretrained model this parameter should be set to True')
+    parser.add_argument('--model_pretrained', help='if original pretrained model this parameter should be set to True')
     parser.add_argument('--model_path', default=MODEL_PATH, help='path of the model saved for each epoch')
     parser.add_argument('--model_path_fin', default=MODEL_PATH, help='path of the final saved model')
     parser.add_argument('--data_dir',default=DATA_DIR, help='path of the train dataset')
