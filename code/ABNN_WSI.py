@@ -367,7 +367,7 @@ def main(args):
     device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
     shuffle=True
-    #if mode=TRAIN
+    #if mode is TRAIN
     if args.mode == "TRAIN":
         (num_classes, train_loader, valid_loader, test_loader) = loaders(data_dir=args.data_dir,
                                                                          val_dir=args.val_dir,
@@ -394,7 +394,7 @@ def main(args):
         print("Best model obtained at: {} with F1 = {}".format(str(epoch), F1))
 
 
-    #if mode=TENSOR
+    #if mode is TENSOR
     if args.mode == "TENSOR":
 
         model=None
