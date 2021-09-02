@@ -1,7 +1,7 @@
 # ABNN-WSI-Classification
-This repository contains the code to reproduce results of the [Gigapixel Histopathological Image Analysis Using
-Attention-Based Neural Networks](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9447746) paper.
-The structure of CNN consists in a compressing path and a learning path. In the compressing path, the gigapixel image is packed into a grid-based feature map by using a residual network devoted to the feature extraction of each patch into which the image has been divided. In the learning path, attention modules (Maxpooling and Minpooling) are applied to the grid-based feature map, taking into account spatial correlations of neighboring patch features to find regions of interest, which are then used for the final whole slide classification.
+This repository contains the code of the method presented in the paper [Gigapixel Histopathological Image Analysis Using
+Attention-Based Neural Networks](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9447746).
+The structure of the proposed CNN consists in a compressing path and a learning path. In the compressing path, the gigapixel image is packed into a grid-based feature map by using a residual network devoted to the feature extraction of each patch into which the image has been divided. In the learning path, attention modules (Maxpooling and Minpooling) are applied to the grid-based feature map, taking into account spatial correlations of neighboring patch features to find regions of interest, which are then used for the final whole slide classification.
 |![Step 1](https://github.com/nadiabrancati/ABNN-WSI-Classification/blob/main/img/method1.png)|
 |:--:| 
 |*Step 1: Compressing path*|
@@ -11,13 +11,11 @@ The structure of CNN consists in a compressing path and a learning path. In the 
 |*Step 2: Learning path*|
 
 # Experiments
-The experiments are based on Camelyon16 and TUPAC 16 datasets. For Camelyon16 a binary classification into Benign and Malignant classes was performed. Regarding TUPAC16 dataset, a regression related to the prediction of the proliferation score based on molecular data was calculated. 
+The experiments presented in the paper [Gigapixel Histopathological Image Analysis Using
+Attention-Based Neural Networks](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9447746) are based on Camelyon16 and TUPAC 16 datasets. For Camelyon16 a binary classification into Benign and Malignant classes was performed. Regarding TUPAC16 dataset, a regression related to the prediction of the proliferation score based on molecular data was calculated. 
 
 New esperiments have been made by using WSI of [BRACS dataset](https://www.bracs.icar.cnr.it/). 
-For BRACS dataset, a three-class classification has been performed, by using Atypical Benign, and Malignant classes for WSIs. 
-
-In order to download the BRACS dataset, you need to create an account [on this site](https://www.bracs.icar.cnr.it/). Then, go to ```Data Collection```, ```Download```, and hit the ```Whole Slide Image Set``` button to access the data. You need to download ```train```, ```validation``` and ```test``` folders. Each subset is divided into three main groups ```Group_AT```, ```Group_BT``` and ```Group_MT```, used in our experiments as Atypical, Benign and Malignant classes, respectively. Due to computational limits, 10× Magnification WSIs have been considered. WSIs are been normalized by using the method proposed in [this paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5193250). For the augmentation, in addition to affine transformations, the normalized WSIs at 5× and 2.5× Magnification have been also used. Results have been computed for five runs with an average F-measure of 69.8% and a standard deviation of 1.5.
-
+For BRACS dataset, a three-class classification has been performed, by using Atypical, Benign, and Malignant classes for WSIs. 
 
 # Installation
 The ```requirements.txt``` file should list all Python libraries that the present code depend on, and they will be installed using:
