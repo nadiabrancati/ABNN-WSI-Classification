@@ -172,7 +172,7 @@ def train(model, args, device, optimizer, num_epochs, train_loader, valid_loader
     best_epoch = 0
     loss = torch.nn.CrossEntropyLoss()
     #parameter of control for the saving of the final model
-    diff_control=100
+    mean_f1=0
 
     for epoch in range(num_epochs):
         running_samples = 0
@@ -214,12 +214,11 @@ def train(model, args, device, optimizer, num_epochs, train_loader, valid_loader
             "Actual model obtained at epoch {}, Validation/Accuracy={}, Mean(F1)={}, CONF={}".format(
                 str(epoch), accuracy, np.mean(F1), conf_mat))
 
-        #if difference between accuracy and mean of F1 (for validation set) is lower than the difference previous computated, save the new model
-        if (accuracy - np.mean(F1)) <= diff_control:
+        #if mean of F1 (for validation set) is higher than F1 previously computated, save the new model
+        if (np.mean(F1)) >=mean_f1:
             model_string = model_path + ".pt"
             torch.save(model.state_dict(), model_string)
-            max_fmeasure_val = np.mean(F1)
-            diff_control = accuracy - max_fmeasure_val
+            mean_f1 = np.mean(F1)
             best_epoch = epoch
             print("MODEL SAVED!!! Actual best model obtained at epoch {}, Accuracy={}, Mean(F1)={}".format(
                 str(best_epoch), accuracy, np.mean(F1)))
