@@ -83,7 +83,7 @@ Learning path to train and test the model can be set by using the parameters ```
 
 An example of usage for learning path is:
 
-```python ABNN_WSI.py --mode TRAIN --data_dir path-for-loading-training-tensors --val_dir path-for-loading-validation-tensors --test_dir path-for-loading-test-tensors --aug_dir path-for-loading-some-augmentation-tensors --aug_dir2 path-for-loading-other-augmentation-tensors --gpu_list 0 --seed 0 --model_path path-to-save-model-for-each-epoch --model_path_fin path-to-save-the-final-model --batch_size 16 --learning_rate 0.0001 --ext pth```
+```python ABNN_WSI.py --mode TRAIN --data_dir path-for-loading-training-tensors --val_dir path-for-loading-validation-tensors --test_dir path-for-loading-test-tensors --aug_dir path-for-loading-some-augmentation-tensors --aug_dir2 path-for-loading-other-augmentation-tensors --gpu_list 0 --seed 0 --model_path path-to-save-model-for-each-epoch --model_path_fin path-to-save-the-final-model --batch_size 8 --learning_rate 0.00001 --ext pth```
 
 # Citation
 If you use this code, please consider citing our work:
