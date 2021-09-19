@@ -463,7 +463,7 @@ if __name__ == '__main__':
     parser.add_argument('--patch_scale', type=int, default=224, help='Patch Scale')
     parser.add_argument('--num_epoch', type=int, default=100, help='max epoch')
     parser.add_argument('--batch_size', type=int, default=1, help='batch size')
-    parser.add_argument('--learning_rate', type=float, default=0.0001, help='learning rate')
+    parser.add_argument('--learning_rate', type=float, default=0.00001, help='learning rate')
     
     # Model parameters
     parser.add_argument('--dropout', type=float, default=0.2, help='dropout rate')
